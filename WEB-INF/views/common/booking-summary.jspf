@@ -1,0 +1,14 @@
+<%-- Shared stay summary box (included by booking.jsp and booking-review.jsp) --%>
+<div class="form-box" style="margin:0; flex:1; min-width:280px; max-width:none;">
+    <img src="${room.imageUrl}" alt="" style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+    <h3 style="margin:12px 0 2px;"><c:out value="${hotel.name}"/></h3>
+    <div class="muted" style="margin-bottom:10px;">&#128205; <c:out value="${hotel.address}"/></div>
+    <div class="summary-row"><span><fmt:message key="label.room"/></span><strong><c:out value="${room.name}"/></strong></div>
+    <div class="summary-row"><span><fmt:message key="label.checkIn"/></span><strong><fmt:formatDate value="${pending.checkIn}" dateStyle="full"/></strong></div>
+    <div class="summary-row"><span><fmt:message key="label.checkOut"/></span><strong><fmt:formatDate value="${pending.checkOut}" dateStyle="full"/></strong></div>
+    <div class="summary-row"><span><fmt:message key="label.nights"/></span><strong>${pending.nights}</strong></div>
+    <div class="summary-row"><span><fmt:message key="label.rooms"/></span><strong>${pending.roomsCount}</strong></div>
+    <div class="summary-row"><span><fmt:message key="label.guests"/></span><strong>${pending.guests}</strong></div>
+    <div class="summary-row"><span>Rs. <fmt:formatNumber value="${room.pricePerNight}" pattern="#,##0"/> &times; <fmt:message key="label.nightsN"><fmt:param value="${pending.nights}"/></fmt:message> &times; ${pending.roomsCount}</span></div>
+    <h3 style="text-align:right; margin:10px 0 0;"><fmt:message key="label.total"/>: <span class="price">Rs. <fmt:formatNumber value="${pending.totalAmount}" pattern="#,##0.00"/></span></h3>
+</div>
