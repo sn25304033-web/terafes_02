@@ -1,0 +1,6 @@
+<div style="margin-bottom:20px; display:flex; gap:10px; flex-wrap:wrap;">
+    <a class="btn" href="${pageContext.request.contextPath}/admin"><fmt:message key="admin.dashboard"/></a>
+    <a class="btn" href="${pageContext.request.contextPath}/admin/hotels"><fmt:message key="admin.hotelsRooms"/></a>
+    <a class="btn" href="${pageContext.request.contextPath}/admin/reservations"><fmt:message key="admin.reservations"/></a>
+    <a class="btn" href="${pageContext.request.contextPath}/admin/taxis">&#128661; <fmt:message key="admin.taxis"/></a>
+</div>
